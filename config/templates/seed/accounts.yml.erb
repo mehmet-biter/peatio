@@ -1,0 +1,101 @@
+<% if ENV['ACCOUNTS_CONFIG'] %>
+<%= File.read(ENV['ACCOUNTS_CONFIG']) %>
+<% else %>
+- code:           101
+  type:           asset
+  kind:           main
+  currency_type:  fiat
+  description:    Main Fiat Assets Account
+  scope:          platform
+
+- code:           102
+  type:           asset
+  kind:           main
+  currency_type:  coin
+  description:    Main Digital Assets Account
+  scope:          platform
+
+- code:           201
+  type:           liability
+  kind:           main
+  currency_type:  fiat
+  description:    Main Fiat Spot Liabilities Account
+  scope:          member
+
+- code:           202
+  type:           liability
+  kind:           main
+  currency_type:  coin
+  description:    Main Digital Asset Spot Liabilities Account
+  scope:          member
+
+- code:           211
+  type:           liability
+  kind:           locked
+  currency_type:  fiat
+  description:    Locked Fiat Spot Liabilities Account
+  scope:          member
+
+- code:           212
+  type:           liability
+  kind:           locked
+  currency_type:  coin
+  description:    Locked Digital Asset Spot Liabilities Account
+  scope:          member
+
+- code:           221
+  type:           liability
+  kind:           main
+  currency_type:  fiat
+  description:    Main Fiat P2P Liabilities Account
+  scope:          member
+
+- code:           222
+  type:           liability
+  kind:           main
+  currency_type:  coin
+  description:    Main Digital Asset P2P Liabilities Account
+  scope:          member
+
+- code:           231
+  type:           liability
+  kind:           locked
+  currency_type:  fiat
+  description:    Locked Fiat P2P Liabilities Account
+  scope:          member
+
+- code:           232
+  type:           liability
+  kind:           locked
+  currency_type:  coin
+  description:    Locked Digital Asset P2P Liabilities Account
+  scope:          member
+
+- code:           301
+  type:           revenue
+  kind:           main
+  currency_type:  fiat
+  description:    Main Fiat Revenues Account
+  scope:          platform
+
+- code:           302
+  type:           revenue
+  kind:           main
+  currency_type:  coin
+  description:    Main Digital Asset Revenues Account
+  scope:          platform
+
+- code:           401
+  type:           expense
+  kind:           main
+  currency_type:  fiat
+  description:    Main Fiat Expenses Account
+  scope:          platform
+
+- code:           402
+  type:           expense
+  kind:           main
+  currency_type:  coin
+  description:    Main Digital Asset Expenses Account
+  scope:          platform
+<% end %>
